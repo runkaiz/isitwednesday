@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang='ts'>
+    import "../app.css";
+	import { getSnark, isItWednesday } from "$lib/helper";
+
+    let snark: string = getSnark(isItWednesday(Date.now()))
+</script>
+
+{#if snark !== ''}
+<h1 class='font-serif text-2xl h-screen flex items-center justify-center px-12'>{snark}</h1>
+{/if}
