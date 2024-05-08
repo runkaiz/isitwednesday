@@ -1,5 +1,5 @@
 export function isItWednesday(timestamp: number): boolean {
-    const now = new Date(timestamp*1000);
+    const now = new Date(timestamp);
     const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
     const dayOfWeek = days[now.getDay()]
 

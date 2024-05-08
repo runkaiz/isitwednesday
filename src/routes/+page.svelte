@@ -2,9 +2,10 @@
     import "../app.css";
 	import { getSnark, isItWednesday } from "$lib/helper";
 
-    let snark: string = getSnark(isItWednesday(Date.now()))
+    const wednesday = isItWednesday(Date.now())
+    let snark: string = getSnark(wednesday)
 </script>
 
-{#if snark !== ''}
+{#if snark}
 <h1 class='font-serif text-2xl h-screen flex items-center justify-center px-12'>{snark}</h1>
 {/if}
